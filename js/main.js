@@ -16,8 +16,6 @@ Papa.parse("tappy_data.csv", {
     document.getElementById("quote-author").innerText = authorText
       ? `${authorText}`
       : "";
-
-    //document.getElementById("quote-text").innerText = "It's not the load that break you down, it's the way your carry it.";
   }
 });
 
@@ -30,4 +28,3 @@ for (let i = 1; i <= imageCount; i++) {
 
 const randomImage = images[Math.floor(Math.random() * images.length)];
 document.getElementById("random-image").src = randomImage;
-//document.getElementById("random-image").src = "images/image (6).png";
