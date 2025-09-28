@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Happy Tappy Minds</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      overflow: hidden;
+      font-family: 'Times New Roman', Times, serif, sans-serif;
+    }
+
+    .background-image {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .background-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+
+    #quote-container {
+      position: absolute;
+      top: 12.5vh;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 600px;
+      width: 50vw;
+      height: 375px;
+      padding: 0px;
+      box-sizing: border-box;
+      color: white;
+      text-align: center;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;  
+    }
+
+    #quote-text {
+      font-size: clamp(1.2rem, 4vw, 2.5rem);
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+      /*text-shadow: 1px 1px 55px rgba(0, 0, 0, 0.9);*/
+      line-height: 1.4;
+      word-wrap: break-word;
+    }
+
+    #quote-author {
+      font-size: clamp(1.2rem, 4vw, 2.5rem);
+      font-style: italic;
+      text-shadow: 2px 2px 3px rgba(0,0,0,0.7);
+    }
+
+    @media (max-width: 600px) {
+      html, body {
+        height: auto; /* let content grow naturally on mobile */
+      }
+
+      .background-image img {
+        object-position: center center; /* change focus to center for mobile */
+      }
+
+      #quote-container {
+        width: 90vw;
+        height: 300px;
+      }
+
+      #quote-text {
+        font-size: 1.5rem;
+        padding: 0px;
+      }
+
+      #quote-author {
+        font-size: 1.5rem;
+        padding: 0px;
+      }
+    }
+
+    .bottom-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      /*background: #f8f8f8; /* light gray background */
+      display: flex;
+      justify-content: space-around; /* spread out evenly */
+      padding: 10px 0;
+      /*border-top: 2px solid #ddd; /* little divider line */
+    }
+
+    .image-button img {
+      width: 60px;   /* adjust icon size */
+      height: auto;
+      border-radius: 12px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .image-button img:hover {
+      transform: scale(1.1); /* zoom effect on hover */
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+  </style>
+
+</head>
+<body>
+  <div class="background-image">
+    <img id="random-image" src="" alt="Background">
+   <!--<h2 id="random-text">Loading...</h2>-->
+  </div>
+
+  <div id="quote-container">
+    <div id="quote-text"></div>
+    <div id="quote-author"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  
+  <script src="js/main.js"></script>
+
+  <!-- Bottom navigation bar -->
+  <div class="bottom-bar">
+    <a href="https://tappyminds.com" class="image-button" target="_blank">
+      <img src="buttons/cart.png" alt="Button 1">
+    </a>
+    <a href="https://instagram.com/tappyminds" class="image-button" target="_blank">
+      <img src="buttons/logo.png" alt="Button 2">
+    </a>
+    <a href="https://linktr.ee/tappyminds" class="image-button" target="_blank">
+      <img src="buttons/phone.png" alt="Button 3">
+    </a>
+  </div>
+
+</body>
+</html>

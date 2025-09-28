@@ -1,0 +1,2 @@
+/bracelets     https://happytappydemo.netlify.app          200
+/bracelets/*   https://happytappydemo.netlify.app/:splat   200git

@@ -1,0 +1,10 @@
+*.psd
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.tiff
+photos/
+images/
+*.zip
+*.tar.gz
